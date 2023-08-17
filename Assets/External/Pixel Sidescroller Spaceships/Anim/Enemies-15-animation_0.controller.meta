@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 545a2458c969c4b45856b6c3e6cb21ac
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222012
+  packageName: Pixel Sidescroller Spaceships
+  packageVersion: 1.2
+  assetPath: Assets/Pixel Sidescroller Spaceships/Anim/Enemies-15-animation_0.controller
+  uploadId: 533749

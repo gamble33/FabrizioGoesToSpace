@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2178843ff5b23ee4c8cb200aaf726150
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222012
+  packageName: Pixel Sidescroller Spaceships
+  packageVersion: 1.2
+  assetPath: Assets/Pixel Sidescroller Spaceships/Anim/green-ship-animation_0.controller
+  uploadId: 533749

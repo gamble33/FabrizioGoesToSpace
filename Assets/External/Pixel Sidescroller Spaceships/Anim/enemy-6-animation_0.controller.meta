@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8633920cac14f5349885e77184ddfd1f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222012
+  packageName: Pixel Sidescroller Spaceships
+  packageVersion: 1.2
+  assetPath: Assets/Pixel Sidescroller Spaceships/Anim/enemy-6-animation_0.controller
+  uploadId: 533749

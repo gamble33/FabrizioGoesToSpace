@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ebb2239456e409a832c5ae571cddf67, type: 3}
+  m_Name: FighterJetSpawnAttributes
+  m_EditorClassIdentifier: 
+  name: Fighter Jet
+  rangeAboveCameraView: 2
+  distancePastCamera: 2
+  minSpawnAmount: 1
+  maxSpawnAmount: 1
+  prefab: {fileID: 1988460437649085821, guid: c1e0c4a9864bc9b42894ba9f4bff7f0b, type: 3}

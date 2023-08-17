@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3f22ad0ead1745f4fb1b857922ae03c6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 222012
+  packageName: Pixel Sidescroller Spaceships
+  packageVersion: 1.2
+  assetPath: Assets/Pixel Sidescroller Spaceships/Anim/darkgrey-ship-animation_0.controller
+  uploadId: 533749
