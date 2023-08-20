@@ -3,20 +3,14 @@ using UnityEngine.Events;
 
 namespace Player
 {
-    public class PlayerBehaviour : MonoBehaviour
+    public class PlayerBehaviour : EntityBehaviour
     {
         public UnityEvent<float> onTakeDamage = new();
         
-        private float _health = 100;
-
-        private void OnCollisionEnter2D(Collision2D col)
+        public override void TakeDamage(float amount)
         {
-            Debug.Log("Collision Occured");
-            if (col.collider.CompareTag("Enemy"))
-            {
-                _health -= 25f;
-                onTakeDamage.Invoke(_health);
-            }
+            base.TakeDamage(amount);
+            onTakeDamage.Invoke(Health);
         }
     }
 }

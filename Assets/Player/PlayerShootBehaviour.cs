@@ -1,10 +1,11 @@
-using System;
+using InstantiatedWeapons;
 using UnityEngine;
 
 public class PlayerShootBehaviour : MonoBehaviour
 {
     [SerializeField] private float fireRate;
     [SerializeField] private GameObject bullet;
+    [SerializeField] private float bulletSpeed;
 
     private float _shotInterval;
     private float _timeSinceLastShot = 0f;
@@ -26,6 +27,8 @@ public class PlayerShootBehaviour : MonoBehaviour
 
     private void Fire()
     {
-        Instantiate(bullet, transform.position, Quaternion.Euler(0f, 0f, 90f));
+        Instantiate(bullet, transform.position, Quaternion.identity).GetComponent<BulletBehaviour>()
+            .Init(Vector2.right * bulletSpeed, gameObject);
+        
     }
 }

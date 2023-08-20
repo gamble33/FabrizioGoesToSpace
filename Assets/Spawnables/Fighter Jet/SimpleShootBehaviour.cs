@@ -1,4 +1,5 @@
 using System;
+using InstantiatedWeapons;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,6 +11,7 @@ namespace Spawnables.Fighter_Jet
         [SerializeField] private float fireIntervalVariation;
         [SerializeField] private Transform firePoint;
         [SerializeField] private GameObject bullet;
+        [SerializeField] private float bulletSpeed;
 
         private float _timeSinceLastShot;
         private float _shotInterval;
@@ -32,7 +34,8 @@ namespace Spawnables.Fighter_Jet
 
         private void Fire()
         {
-            Instantiate(bullet, firePoint.position, Quaternion.identity);
+            GameObject bulletObj = Instantiate(bullet, firePoint.position, Quaternion.identity);
+            bulletObj.GetComponent<BulletBehaviour>().Init(Vector2.left * bulletSpeed, gameObject);
         }
     }
 }

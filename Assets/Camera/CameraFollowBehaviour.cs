@@ -8,7 +8,9 @@ namespace Camera
         [SerializeField] private float damping;
         [SerializeField] private Transform target;
 
-        private void Update()
+        private Vector3 _velocity = Vector3.zero;
+
+        private void LateUpdate()
         {
             Vector3 cameraPosition = transform.position;
             Vector2 desiredPosition = new Vector2(cameraPosition.x, target.position.y);

@@ -5456,7 +5456,7 @@ GameObject:
   - component: {fileID: 1633525586}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5473,8 +5473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f84e316627874c4c9837c2031b42797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  damping: 5
+  thrust: 20
 --- !u!4 &1633525582
 Transform:
   m_ObjectHideFlags: 0
@@ -5506,6 +5505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 2
   bullet: {fileID: 4960822247047869789, guid: f5bdcf192aa4bdc40a1f06fe23418205, type: 3}
+  bulletSpeed: 40
 --- !u!61 &1633525584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5564,6 +5564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721413474d3449c893e8b7baccfa74e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   onTakeDamage:
     m_PersistentCalls:
       m_Calls:
@@ -5605,7 +5606,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1674495136
 GameObject:
   m_ObjectHideFlags: 0
