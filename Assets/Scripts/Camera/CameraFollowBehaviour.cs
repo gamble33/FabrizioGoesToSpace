@@ -13,12 +13,14 @@ namespace Camera
         private void LateUpdate()
         {
             Vector3 cameraPosition = transform.position;
-            Vector2 desiredPosition = new Vector2(cameraPosition.x, target.position.y);
-            cameraPosition = Vector3.Lerp(
-                cameraPosition,
+            Vector3 desiredPosition = new Vector3(cameraPosition.x, target.position.y, -10f);
+            cameraPosition = Vector3.SmoothDamp(
+                transform.position,
                 desiredPosition,
-                Time.deltaTime * damping
+                ref _velocity,
+                damping
             );
+
             cameraPosition.z = -10f;
             transform.position = cameraPosition;
         }

@@ -11,6 +11,7 @@ namespace Player
         
         private Rigidbody2D _rb;
         private Vector2 _input;
+        private Vector2 _targetVelocity;
 
         private void Awake()
         {
@@ -20,15 +21,7 @@ namespace Player
         private void Update()
         {
             _input = GetInput();
-
-            if (transform.position.x > 46f)
-            {
-                transform.position = new Vector3(-45f, transform.position.y, transform.position.z);
-            } else if (transform.position.x < -46f)
-            {
-                
-                transform.position = new Vector3(45f, transform.position.y, transform.position.z);
-            }
+            _targetVelocity = _input * thrust;
         }
 
         private Vector2 GetInput()
@@ -41,8 +34,7 @@ namespace Player
 
         private void FixedUpdate()
         {
-            Vector2 targetVelocity = _input * thrust;
-            Vector2 deltaVelocity = targetVelocity - _rb.velocity;
+            Vector2 deltaVelocity = _targetVelocity - _rb.velocity;
             _rb.AddForce(deltaVelocity);
         }
     }

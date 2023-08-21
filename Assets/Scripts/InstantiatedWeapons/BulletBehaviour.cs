@@ -23,7 +23,6 @@ namespace InstantiatedWeapons
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Collision Occured");
             if (other.CompareTag("Entity") && !Object.ReferenceEquals(other.gameObject, _owner))
             {
                 other.GetComponent<EntityBehaviour>().TakeDamage(damage);

@@ -1,3 +1,4 @@
+using Audio;
 using InstantiatedWeapons;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class PlayerShootBehaviour : MonoBehaviour
     private void Awake()
     {
         _shotInterval = 1f / fireRate;
+        AudioController.Instance.PlayAudio(AudioKind.Ost01);
     }
 
     void Update()
@@ -27,6 +29,7 @@ public class PlayerShootBehaviour : MonoBehaviour
 
     private void Fire()
     {
+        AudioController.Instance.PlayAudio(AudioKind.Sfx01);
         Instantiate(bullet, transform.position, Quaternion.identity).GetComponent<BulletBehaviour>()
             .Init(Vector2.right * bulletSpeed, gameObject);
         
