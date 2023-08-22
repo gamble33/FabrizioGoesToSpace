@@ -6,7 +6,7 @@ namespace Spawnables
     {
         void Update()
         {
-            if (Mathf.Abs(transform.position.x) > 45f) Destroy(gameObject);
+            if (Mathf.Abs(transform.position.x) > 69f) Destroy(gameObject);
         }
     }
 }

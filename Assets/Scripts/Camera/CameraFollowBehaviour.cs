@@ -13,9 +13,9 @@ namespace Camera
         private void LateUpdate()
         {
             Vector3 cameraPosition = transform.position;
-            Vector3 desiredPosition = new Vector3(cameraPosition.x, target.position.y, -10f);
+            Vector3 desiredPosition = new Vector3(target.position.x, target.position.y, -10f);
             cameraPosition = Vector3.SmoothDamp(
-                transform.position,
+                cameraPosition,
                 desiredPosition,
                 ref _velocity,
                 damping

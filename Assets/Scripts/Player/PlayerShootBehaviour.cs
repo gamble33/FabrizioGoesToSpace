@@ -1,4 +1,5 @@
 using Audio;
+using Camera;
 using InstantiatedWeapons;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ public class PlayerShootBehaviour : MonoBehaviour
     private void Awake()
     {
         _shotInterval = 1f / fireRate;
-        AudioController.Instance.PlayAudio(AudioKind.Ost01);
+        AudioController.Instance.PlayAudio(AudioKind.Ost02);
     }
 
     void Update()
@@ -29,6 +30,7 @@ public class PlayerShootBehaviour : MonoBehaviour
 
     private void Fire()
     {
+        StartCoroutine(UnityEngine.Camera.main.GetComponent<CameraShake>().Shake(1.00f, 1f, 16f));
         AudioController.Instance.PlayAudio(AudioKind.Sfx01);
         Instantiate(bullet, transform.position, Quaternion.identity).GetComponent<BulletBehaviour>()
             .Init(Vector2.right * bulletSpeed, gameObject);
