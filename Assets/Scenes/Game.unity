@@ -205,6 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157809380}
   - component: {fileID: 157809381}
+  - component: {fileID: 157809382}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -239,12 +240,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3bfd736e381de478908008e8be9d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnFrequency: 2
+  camera: {fileID: 1923273285}
+  despawnBehaviour: {fileID: 157809382}
+  player: {fileID: 1633525585}
+  spawnFrequency: 0.5
   spawnIntervalVariation: 0.1
   spawnableAttributesArray:
   - {fileID: 11400000, guid: dc4882c30f8ebac45b1e4a1e28d0125c, type: 2}
   - {fileID: 11400000, guid: 71cac010fda6d0d4e8bdf91468998eb5, type: 2}
-  camera: {fileID: 1923273285}
+--- !u!114 &157809382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157809379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c1cca13b574fc097a369f289efcdd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1633525582}
+  despawnDistance: 80
 --- !u!1 &435875826
 GameObject:
   m_ObjectHideFlags: 0
@@ -10250,6 +10267,10 @@ MonoBehaviour:
     audio:
     - kind: 3
       clip: {fileID: 8300000, guid: d5413403774f5574184d3faf585f0f3e, type: 3}
+    - kind: 4
+      clip: {fileID: 8300000, guid: 459aa78086c97cd4090f11f7ebe72617, type: 3}
+    - kind: 5
+      clip: {fileID: 8300000, guid: 9ae3f5b07ae542b46933005802598616, type: 3}
 --- !u!4 &1514911273
 Transform:
   m_ObjectHideFlags: 0
@@ -10434,8 +10455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32780381779abd4cbbcd3ed224fb7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 1
+  despawnBehaviour: {fileID: 157809382}
   bullet: {fileID: 4960822247047869789, guid: f5bdcf192aa4bdc40a1f06fe23418205, type: 3}
+  fireRate: 1
   bulletSpeed: 40
 --- !u!61 &1633525584
 BoxCollider2D:
@@ -10534,7 +10556,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -10849,7 +10871,7 @@ Transform:
   m_GameObject: {fileID: 1923273283}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

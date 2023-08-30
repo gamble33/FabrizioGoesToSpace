@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 0a4b0bce1e250a14bb534d70bce205fa
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37457
+  packageName: Stylized Nature Pack
+  packageVersion: 1.2
+  assetPath: Assets/Stylized Nature Pack/Demo Scene/Standard Assets/Effects/TessellationShaders/Shaders/BumpedSpecularDisplacement.shader
+  uploadId: 68729

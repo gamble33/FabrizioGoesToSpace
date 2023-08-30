@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 003377fc2620a44939dadde6fe3f8190
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37457
+  packageName: Stylized Nature Pack
+  packageVersion: 1.2
+  assetPath: Assets/Stylized Nature Pack/Demo Scene/Standard Assets/Effects/ImageEffects/Shaders/Tonemapper.shader
+  uploadId: 68729
